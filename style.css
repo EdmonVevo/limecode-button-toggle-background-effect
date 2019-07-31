@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #ffb70f;
+}
+
+.background {
+  width: 0;
+  height: 0;
+  background: #66ca33;
+  transition: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.background_cover {
+  width: 3000px;
+  height: 3000px;
+}
+
+
+.button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background: #418022;
+  cursor: pointer;
+  position: relative;
+  transition: 1s;
+  border: 12px solid aliceblue;
+}
+
+.button_rotate {
+  transform: rotate(180deg);
+  background: #b98407;
+  transition: 1s;
+  border:2px solid aliceblue;
+}
+
+
+.button:before {
+  content: '';
+  width: 4px;
+  height: 50px;
+  background: #ffb70f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.button:after {
+  content: '';
+  width: 4px;
+  height: 50px;
+  background: #ffb70f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+
+.button_rotate:after {
+  background: #66ca33;
+}
+
+.button_rotate:before {
+  background: #66ca33;
+}
